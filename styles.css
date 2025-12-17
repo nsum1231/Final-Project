@@ -1,0 +1,161 @@
+/* Global page body styles (applies to every HTML page's <body>) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: #ffffff;
+    padding-bottom: 120px; /* space for fixed footer */
+}
+
+/* Header styling (targets the top <header> used on index.html and hobby.html) */
+header {
+    background: #003078;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Ensure section headings and paragraphs are centered inside <main> sections */
+main section,
+main section h2,
+main section p {
+    text-align: center;
+}
+
+/* Navigation list: removes bullets and default list spacing for <nav> <ul> */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation links inside <nav> (the header links) */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+
+    /* Page-level centered container (if used in pages) */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Footer (fixed to bottom of viewport) */
+footer {
+    background: #003078;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h3 {
+    color: #ffffff;
+}
+
+/* Section headings color (applies to <h2> used across sections) */
+h2 {
+    color: #003078;
+}
+
+.section {
+    /* Generic section card styling (not currently used as a class in all files) */
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Who I Am section: add border, padding, and narrower width */
+/* "Who I Am" section on index.html (targets the second <section> in the page) */
+section:nth-of-type(2) {
+    border: 4px solid #003078;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 30px 40px;
+}
+
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* center images in the row */
+    align-items: center;
+}
+.gallery img {
+    max-width: 62%; /* ~30% larger than previous 48% */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 5px solid #003078;
+}
+
+/* Home page: make the family image larger without affecting hobby gallery
+   Targets the image inside .gallery only on pages with <body class="home"> */
+.home .gallery img {
+    max-width: 80%;
+}
+
+@media (max-width: 600px) {
+    .gallery img {
+        max-width: 100%;
+    }
+}
+
+#byu-game {
+    /* Trivia game box on hobby.html (centers and constrains width) */
+    max-width: 450px;
+    padding: 20px;
+    border: 2px solid #003a8f;
+    border-radius: 10px;
+    background: #f9f9f9;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+#byu-game button {
+    /* Buttons inside trivia game */
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#byu-game #feedback {
+  font-weight: bold;
+}
+
+/* Tableau embed: constrain width, center, and add spacing from previous section */
+.tableauPlaceholder {
+    max-width: 800px;
+    margin: 30px auto 60px; /* top spacing to separate from trivia, bottom spacing */
+}
+.tableauPlaceholder object,
+.tableauPlaceholder iframe {
+    width: 100% !important;
+    height: 700px !important;
+}
+
+/* Professional page: left-align the resume section (#resume) so text isn't centered */
+#resume,
+#resume h2,
+#resume h3,
+#resume p,
+#resume ul,
+#resume li {
+    text-align: left;
+}
